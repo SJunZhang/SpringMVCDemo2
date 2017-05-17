@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-//zsj
+
 @Controller
 @RequestMapping("/test")
 public class DemoResource{
@@ -27,6 +27,11 @@ public class DemoResource{
 		ModelAndView mv =  new ModelAndView("views/viewName");
 		mv.addObject("msg","good msg");
 		return mv;
+	}
+	
+	@RequestMapping(value="/upload",method=RequestMethod.GET)
+	public ModelAndView test4(){
+		return new ModelAndView("upload/upload");
 	}
 	
 
