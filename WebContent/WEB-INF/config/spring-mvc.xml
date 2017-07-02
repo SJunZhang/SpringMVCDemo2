@@ -39,6 +39,16 @@
 		</property>
 	</bean>  -->
 
+	<bean id="simpleUrlMapping"
+	class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/userlist.htm">UserController</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="UserController" class="com.zhang.springmvc.resource.UserController"></bean>
 
 
 </beans>
